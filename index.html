@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>CDP Week</title>
+    <meta name="description" content="Segment CDP Week - Slices with Segment" />
+    <meta name="author" content="Hunter Medney" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/bootstrap-grid.min.css" />
+    <link rel="stylesheet" href="dist/bootstrap-utilities.min.css" />
+    <link rel="stylesheet" href="dist/theme/cdpweek.css" id="theme" />
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+  </head>
+
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h1>🍕 Slices with Segment</h1>
+          <p>Improving data governance using software engineering best practices</p>
+
+          <div class="d-flex justify-content-center" style="margin-top: 7rem">
+            <div class="text-end pe-5 align-self-center">
+              <img src="assets/ibm.svg" alt="IBM logo" height="100px" class="m-0" />
+            </div>
+            <div class="text-start ps-5 h-auto" style="border-left: white 2px solid">
+              <div>
+                <strong>Hunter Medney</strong>
+              </div>
+              <div class="mt-3">
+                Lead Architect
+                <br />
+                Digital Growth @ IBM
+                <br />
+                LinkedIn: <a href="https://www.linkedin.com/in/hmedney/">hmedney</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section data-markdown>
+          <script type="text/template">
+            ## How do we use Segment?
+
+            - Product analytics
+            - Journeys
+            - Nurture
+            - Consumption
+          </script>
+        </section>
+
+        <section data-background-color="white" class="r-stretch" data-transition="none">
+          <img src="assets/flow1.svg" alt="Build diagram" class="m-0" />
+        </section>
+
+        <section data-background-color="white" class="r-stretch" data-transition="none">
+          <img src="assets/flow2.svg" alt="Build diagram" class="m-0" />
+        </section>
+
+        <section data-auto-animate>
+          <h2>Schema governance challenges</h2>
+          <p>With so many stakeholders, how do we:</p>
+          <ul>
+            <li>Propose a <span data-id="code1" class="code-before">schema</span> change?</li>
+            <li>Iterate on a <span data-id="code2" class="code-before">schema</span> change?</li>
+            <li>Understand implications of a <span data-id="code3" class="code-before">schema</span> change?</li>
+            <li>Review/approve a <span data-id="code4" class="code-before">schema</span> change?</li>
+            <li>Roll-back a <span data-id="code5" class="code-before">schema</span> change?</li>
+            <li>Keep an audit trail of each <span data-id="code6" class="code-before">schema</span> change?</li>
+            <li>Ensure everyone has same version of the <span data-id="code7" class="code-before">schema</span>?</li>
+          </ul>
+        </section>
+
+        <section data-auto-animate>
+          <h2>Schema governance challenges</h2>
+          <p>With so many stakeholders, how do we:</p>
+          <ul>
+            <li>Propose a <span data-id="code1" class="code-after">code</span> change?</li>
+            <li>Iterate on a <span data-id="code2" class="code-after">code</span> change?</li>
+            <li>Understand implications of a <span data-id="code3" class="code-after">code</span> change?</li>
+            <li>Review/approve a <span data-id="code4" class="code-after">code</span> change?</li>
+            <li>Roll-back a <span data-id="code5" class="code-after">code</span> change?</li>
+            <li>Keep an audit trail of each <span data-id="code6" class="code-after">code</span> change?</li>
+            <li>Ensure everyone has same version of the <span data-id="code7" class="code-after">code</span>?</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Treat data standards as code and manage with GitHub</h2>
+          <div>
+            <img src="assets/github.svg" style="height: 100%" alt="GitHub logo" />
+          </div>
+          <p>Schema governance challenges <span class="code-after">solved</span>!</p>
+        </section>
+
+        <section>
+          <h2>Managing data standards as code</h2>
+          <table style="font-size: 80%">
+            <thead>
+              <tr>
+                <th width="47%"></th>
+                <th width="6%" />
+                <th width="47%"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Propose a schema change?</td>
+                <td>➡️</td>
+                <td>Create a Pull Request (PR) against schema repo</td>
+              </tr>
+              <tr>
+                <td>Iterate on a schema change?</td>
+                <td>➡️</td>
+                <td>Collaborate in PR comments</td>
+              </tr>
+              <tr>
+                <td>Understand implications of a schema change?</td>
+                <td>➡️</td>
+                <td>View Schema Impact Report in PR Checks</td>
+              </tr>
+              <tr>
+                <td>Review/approve a schema change?</td>
+                <td>➡️</td>
+                <td>Approve and merge the PR</td>
+              </tr>
+              <tr>
+                <td>Roll-back a schema change?</td>
+                <td>➡️</td>
+                <td>Revert the PR</td>
+              </tr>
+              <tr>
+                <td>Keep an audit trail of each schema change?</td>
+                <td>➡️</td>
+                <td>All changes in GitHub commit and PR history</td>
+              </tr>
+              <tr>
+                <td>Ensure everyone has same version of the code?</td>
+                <td>➡️</td>
+                <td>Build and deploy all schema artifacts on PR merge</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section class="r-stretch">
+          Event yaml files are "compiled" into Segment tracking plans and documentation
+          <img src="assets/build.svg" alt="Build diagram" class="m-0" />
+        </section>
+
+        <section>
+          <h2><a href="https://github.com/hmedney-segment">Schema management demo</a></h2>
+          <div style="margin-top: 5rem">
+            Follow along in<br />
+            <a href="https://github.com/hmedney-segment/schema">https://github.com/hmedney-segment/schema</a>
+          </div>
+        </section>
+
+        <section>
+          <h2>What about tracking plans with complex rules?</h2>
+          <ul>
+            <li>Propery names fitting regex patterns</li>
+            <li>Global rules that apply to all events</li>
+            <li>Allow freeform values for some properties</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Same solution as with code - use automated testing!</h2>
+          <p>Ensure known event payloads are allowed and blocked as expected after each change</p>
+        </section>
+
+        <section>
+          <h2>Why is automated testing beneficial for tracking plans?</h2>
+
+          <div class="d-flex">
+            <div class="text-start">
+              <h4>Tracking plans tell us:</h4>
+              <ul>
+                <li>Event was unplanned</li>
+                <li>Event property was unplanned</li>
+                <li>Event property was a schema violation</li>
+                <li>Common/global event rule was violated</li>
+              </ul>
+            </div>
+            <div></div>
+            <div class="text-start">
+              <h4>Source settings tell us:</h4>
+              <ul>
+                <li>Block the entire event</li>
+                <li>Allow event but omit offending property(s)</li>
+                <li>Do nothing - allow entier event</li>
+              </ul>
+            </div>
+          </div>
+          <p>When combined with the event payload, this is too many permutations for manual testing!</p>
+        </section>
+      </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/zoom/zoom.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/search/search.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      Reveal.initialize({
+        controls: true,
+        progress: false,
+        transition: 'none',
+        backgroundTransition: 'none',
+        center: true,
+        hash: true,
+        plugins: [RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight]
+      });
+    </script>
+  </body>
+</html>
